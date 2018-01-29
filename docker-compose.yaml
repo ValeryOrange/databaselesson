@@ -1,0 +1,12 @@
+version: "3"
+
+volumes:
+  mongo101data: ~
+
+services:
+  mongo:
+    image: mongo
+    ports: ["27017:27017"]
+    container_name: "mongo101"
+    volumes:
+      - mongo101data:/data/db
